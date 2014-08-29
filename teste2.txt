@@ -1,0 +1,42 @@
+Sencha Cmd v5.0.1.231
+[INF] Processing Build Descriptor : default
+[INF] Loading app json manifest...
+[INF] Writing content to D:\projetos\grafite_ext5/bootstrap.js
+[INF] Writing content to D:\projetos\grafite_ext5/bootstrap.json
+[WRN] C1014: callParent has no target (this.callParent in Ext.form.field.Picker.onOtherFocus) -- D:\projetos\grafite_ext5\ext\src\form\field\Picker.js:325
+[WRN] C1014: callParent has no target (me.callParent in Ext.form.field.Tag.mimicBlur) -- D:\projetos\grafite_ext5\ext\src\form\field\Tag.js:1298
+[WRN] C1014: callParent has no target (me.callParent in Ext.grid.plugin.RowEditing.startEditByClick) -- D:\projetos\grafite_ext5\ext\src\grid\plugin\RowEditing.js:278
+[WRN] C1014: callParent has no target (this.callParent in Ext.rtl.selection.CellModel.doMove) -- D:\projetos\grafite_ext5\ext\src\rtl\selection\CellModel.js:12
+[WRN] C1014: callParent has no target (this.callParent in Ext.rtl.selection.TreeModel.onKeyLeft) -- D:\projetos\grafite_ext5\ext\src\rtl\selection\TreeModel.js:16
+[WRN] C1014: callParent has no target (this.callParent in Ext.rtl.selection.TreeModel.onKeyRight) -- D:\projetos\grafite_ext5\ext\src\rtl\selection\TreeModel.js:8
+[WRN] C1014: callParent has no target (this.callParent in Ext.ux.TabCloseMenu.onBeforeDestroy) -- D:\projetos\grafite_ext5\ext\src\ux\TabCloseMenu.js:83
+[INF] Compressing data with YuiJavascriptCompressor
+[INF] Concatenating output to file D:\projetos\grafite_ext5\build\production\Grafite\app.js
+[INF] merging resources into D:\projetos\grafite_ext5\build\production\Grafite\resources
+[INF] merged 0 resources into D:\projetos\grafite_ext5\build\production\Grafite\resources
+[INF] merging resources into D:\projetos\grafite_ext5\build\production\Grafite\resources
+[INF] merged 0 resources into D:\projetos\grafite_ext5\build\production\Grafite\resources
+[INF] writing sass content to D:\projetos\grafite_ext5/build/temp/production/Grafite/sass/Grafite-all.scss.tmp
+[INF] appending sass content to D:\projetos\grafite_ext5/build/temp/production/Grafite/sass/Grafite-all.scss.tmp
+[INF] appending sass content to D:\projetos\grafite_ext5/build/temp/production/Grafite/sass/Grafite-all.scss.tmp
+[INF] executing compass using system installed ruby runtime
+   create Grafite-all.css 
+[INF] writing sass content to D:\projetos\grafite_ext5/build/temp/production/Grafite/slicer-temp/Grafite-example.scss.tmp
+[INF] writing sass content to D:\projetos\grafite_ext5/build/temp/production/Grafite/slicer-temp/config.rb
+[INF] executing compass using system installed ruby runtime
+   create Grafite-example.css 
+[INF] Writing content to D:\projetos\grafite_ext5/sass/example/bootstrap.json
+[INF] Writing content to D:\projetos\grafite_ext5/sass/example/bootstrap.js
+[INF] Capturing theme image
+[INF] Capture complete
+[INF] Slicing images...
+[INF] Slicing complete - generated 320 images
+[INF] Copying page resources to D:\projetos\grafite_ext5\build\production\Grafite
+[INF] Generating file deltas to D:\projetos\grafite_ext5/build/production/Grafite/deltas
+[INF] Writing content to D:\projetos\grafite_ext5/build/production/Grafite/app.json
+[INF] Writing content to D:\projetos\grafite_ext5/build/production/Grafite/microloader.js
+[INF] Appending content to D:\projetos\grafite_ext5/build/production/Grafite/microloader.js
+[INF] Building output markup to D:\projetos\grafite_ext5/build/production/Grafite/index.html
+[INF] Writing content to D:\projetos\grafite_ext5/build/production/Grafite/index.html
+[INF] generating cache manifest to D:\projetos\grafite_ext5/build/production/Grafite/cache.appcache
+
