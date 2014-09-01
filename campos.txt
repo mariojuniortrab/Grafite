@@ -1,0 +1,31 @@
+Basico
+=================
+Nome,
+Nascimento,
+sexo,
+Grau de Instrução,
+raça cor,
+Natural,
+UF Nasc
+Nacionalidade,
+Tipo Sanguíneo
+------------------
+==================
+
+Documentos
+==================
+Identidade,
+Orgão,
+Estado,
+Data Expedição
+CPF,
+Tipo de Certidão,
+Numero Certidão,
+Livro, Folha, Data, Estado Cartório
+Nº SETPS
+------------------
+==================
+
+Complementar
+==================
+Observação.

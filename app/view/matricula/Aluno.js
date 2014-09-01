@@ -1,6 +1,6 @@
 
 Ext.define("Grafite.view.matricula.Aluno",{
-    extend: "Ext.panel.Panel",
+    extend: "Ext.form.Panel",
     controller: "matricula-aluno",
     xtype: 'matricula-aluno',
     viewModel: {
@@ -11,15 +11,78 @@ Ext.define("Grafite.view.matricula.Aluno",{
         'Grafite.view.matricula.AlunoController'
     ],
 
-
     title: 'Employee Information',
     width: 600,
     bodyPadding: 10,
+
     defaults: {
         anchor: '100%',
         labelWidth: 100
     },
+
     items: [{
+        xtype: 'fieldset',
+        title: 'Básico',
+        collapsible: false,
+        defaults: {
+            labelWidth: 89,
+            anchor: '100%',
+            layout: {
+                type: 'hbox',
+                defaultMargins: {top: 0, right: 5, bottom: 0, left: 0}
+            }
+        },
+        items: [{
+            xtype: 'fieldcontainer',
+            combineErrors: true,
+            msgTarget : 'side',
+            layout: 'hbox',
+            defaults: {
+                flex: 1,
+                labelWidth: 89,
+                anchor: '100%',
+                layout: {
+                    type: 'hbox'
+                }
+            },
+            items: [{
+                name: 'nome',
+                xtype: 'textfield',
+                fieldLabel: 'Nome',
+                msgTarget: 'side',
+                allowBlank: false
+            },{
+                xtype: 'datefield',
+                name: 'nascimento',
+                fieldLabel: 'Dt. Nasc.',
+                margin: '0 0 0 10',
+                labelWidth: 70,
+                allowBlank: false
+            },{
+                //the width of this field in the HBox layout is set directly
+                //the other 2 items are given flex: 1, so will share the rest of the space
+                width: 75,
+                xtype: 'combo',
+                queryMode: 'local',
+                value: 'sexo',
+                triggerAction: 'all',
+                forceSelection: true,
+                editable: false,
+                fieldLabel: 'Sexo',
+                name: 'sexo',
+                displayField: 'name',
+                valueField: 'value',
+                margin: '0 0 0 10',
+                store: {
+                    fields: ['name', 'value'],
+                    data: [
+                        {name : 'Sim',   value: 'S'},
+                        {name : 'Não',  value: 'N'}
+                    ]
+                }
+            }]
+        }]
+    },{
         xtype: 'textfield',
         name: 'email',
         fieldLabel: 'Email Address',

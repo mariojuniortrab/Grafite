@@ -8,8 +8,7 @@ Ext.define('Grafite.view.matricula.AlunoController', {
 
     onLoadClick: function() {
     	var view = this.getView();
-    	console.dir(view)
-        /*this.getView().loadRecord(Ext.create('Grafite.model.Aluno', {
+        this.getView().loadRecord(Ext.create('Grafite.model.Aluno', {
             'email'    : 'abe@sencha.com',
             'title'    : 'mr',
             'firstName': 'Abraham',
@@ -21,7 +20,7 @@ Ext.define('Grafite.view.matricula.AlunoController', {
             'phone-3'  : '4567',
             'hours'    : 7,
             'minutes'  : 15
-        }));*/
+        }));
     },
 
     onSaveClick: function() {
