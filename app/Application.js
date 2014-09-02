@@ -13,6 +13,6 @@ Ext.define('Grafite.Application', {
     ],
     
     launch: function () {
-        // TODO - Launch the application
+    	
     }
 });

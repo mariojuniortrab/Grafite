@@ -6,41 +6,12 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('Grafite.view.main.Main', {
-    extend: 'Ext.container.Container',
+    extend: 'Grafite.view.desktop.Desktop',
 
     xtype: 'app-main',
     
     controller: 'main',
     viewModel: {
         type: 'main'
-    },
-
-    requires: [
-        'Grafite.view.matricula.Aluno'
-    ],
-
-    layout: {
-        type: 'border'
-    },
-
-    items: [{
-        xtype: 'panel',
-        bind: {
-            title: '{name}'
-        },
-        region: 'west',
-        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',
-        width: 250,
-        split: true,
-        tbar: [{
-            text: 'Button',
-            handler: 'onClickButton'
-        }]
-    },{
-        region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            xtype:'matricula-aluno'
-        }]
-    }]
-});
+    }
+}); 
