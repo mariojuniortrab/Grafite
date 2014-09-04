@@ -1001,3 +1001,7 @@ $relative-image-path-for-uis: $ext-theme-neptune-resource-path;
 @import '../../../../../ext/packages/ext-theme-neptune/sass/src/grid/header/Container';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/src/grid/column/Column';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/src/resizer/Resizer';
+/* including package Grafite */
+$Grafite-resource-path: 'images' !default;
+$relative-image-path-for-uis: $Grafite-resource-path;
+@import '../../../../../sass/src/main/Main';
