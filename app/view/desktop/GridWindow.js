@@ -21,6 +21,7 @@ Ext.define("Grafite.view.desktop.GridWindow",{
     createWindow : function(){
         var desktop = this.app.getDesktop();
         var win = desktop.getWindow('grid-win');
+
         if(!win){
             win = desktop.createWindow({
                 id: 'grid-win',
@@ -42,7 +43,7 @@ Ext.define("Grafite.view.desktop.GridWindow",{
                                { name: 'change', type: 'float' },
                                { name: 'pctChange', type: 'float' }
                             ],
-                            data: Desktop.GridWindow.getDummyData()
+                            //data: Desktop.GridWindow.getDummyData()
                         }),
                         columns: [
                             new Ext.grid.RowNumberer(),
