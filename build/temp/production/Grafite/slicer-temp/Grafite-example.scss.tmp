@@ -773,12 +773,18 @@ $include-extthemeneptune-toolbar-toolbar: true;
 $include-grafite-application: true;
 $include-grafite-model-aluno: true;
 $include-grafite-model-wallpaper: true;
+$include-grafite-view-basico-empresa: true;
+$include-grafite-view-basico-empresacontroller: true;
+$include-grafite-view-basico-empresamodel: true;
 $include-grafite-view-desktop-desktop: true;
 $include-grafite-view-desktop-desktopcontroller: true;
 $include-grafite-view-desktop-desktopmodel: true;
 $include-grafite-view-desktop-gridwindow: true;
 $include-grafite-view-desktop-gridwindowcontroller: true;
 $include-grafite-view-desktop-gridwindowmodel: true;
+$include-grafite-view-desktop-janelapadrao: true;
+$include-grafite-view-desktop-janelapadraocontroller: true;
+$include-grafite-view-desktop-janelapadraomodel: true;
 $include-grafite-view-desktop-modulosmenu: true;
 $include-grafite-view-desktop-modulosmenucontroller: true;
 $include-grafite-view-desktop-modulosmenumodel: true;
@@ -791,6 +797,7 @@ $include-grafite-view-main-mainmodel: true;
 $include-grafite-view-matricula-aluno: true;
 $include-grafite-view-matricula-alunocontroller: true;
 $include-grafite-view-matricula-alunomodel: true;
+$include-grafite-view-matricula-matriculajanela: true;
 /* including package ext-theme-base */
 @import '../../../../../ext/packages/ext-theme-base/sass/etc/all';
 /* including package ext-theme-neutral */

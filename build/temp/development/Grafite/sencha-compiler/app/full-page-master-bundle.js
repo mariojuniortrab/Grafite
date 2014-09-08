@@ -1,2 +1,2 @@
 // @tag full-page
-// @require C:\xampp\htdocs\Grafite\app.js
+// @require D:\projetos\grafite_ext5\app.js

@@ -11,6 +11,9 @@ Ext.define("Grafite.view.matricula.MatriculaJanela",{
 	},
 	
 	items : [{
-		xtype: 'matricula-aluno'
-	}]
+        xtype: 'tabpanel',
+        items:[{
+            xtype:'matricula-aluno'
+        }]
+    }]
 })
