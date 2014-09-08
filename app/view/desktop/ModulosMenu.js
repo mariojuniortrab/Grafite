@@ -26,7 +26,8 @@ Ext.define("Grafite.view.desktop.ModulosMenu",{
 
     getModules : function(){
         return [
-            Ext.create('Grafite.view.desktop.GridWindow')
+            Ext.create('Grafite.view.desktop.JanelaPadrao'),
+            Ext.create('Grafite.view.matricula.MatriculaJanela')
         ];
     },
 

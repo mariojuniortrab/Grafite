@@ -8,8 +8,21 @@ Ext.define("Grafite.view.desktop.GridWindow",{
         'Ext.grid.Panel',
         'Ext.grid.RowNumberer'
     ],
-    victor: 'da ré no kibe',
+   
     id:'grid-win',
+    janela :{
+        id: 'grid-win',
+        title:'teste',
+        width:740,
+        height:480,
+        iconCls: 'icon-grid',
+        animCollapse:false,
+        constrainHeader:true,
+        layout: 'fit',
+        items: [
+
+        ]
+    },
 
     init : function(){
         this.launcher = {
@@ -20,11 +33,12 @@ Ext.define("Grafite.view.desktop.GridWindow",{
 
     createWindow : function(){
         var desktop = this.app.getDesktop();
+            console.log(this)
         var win = desktop.getWindow('grid-win');
         if(!win){
             win = desktop.createWindow({
                 id: 'grid-win',
-                title:'LINCO',
+                title:this.victor,
                 width:740,
                 height:480,
                 iconCls: 'icon-grid',

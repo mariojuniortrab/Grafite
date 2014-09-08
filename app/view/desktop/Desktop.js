@@ -50,7 +50,8 @@ Ext.define("Grafite.view.desktop.Desktop",{
             shortcuts: Ext.create('Ext.data.Store', {
                 model: 'Ext.ux.desktop.ShortcutModel',
                 data: [
-                    { name: 'Grid Window', iconCls: 'grid-shortcut', module: 'grid-win' }
+                    { name: 'Grid Window', iconCls: 'grid-shortcut', module: 'janela-padrao' },
+                    { name: 'Matricula', iconCls: 'grid-shortcut', module: 'matricula-janela' }
                 ]
             }),
 
@@ -93,7 +94,7 @@ Ext.define("Grafite.view.desktop.Desktop",{
 
         return Ext.apply(ret, {
             quickStart: [
-               { name: 'Grid Window', iconCls: 'icon-grid', module: 'grid-win' }
+               { name: 'Grid Window', iconCls: 'icon-grid', module: 'janela-padrao' }
             ],
             trayItems: [
                 { xtype: 'trayclock', flex: 1,  timeFormat: 'G:i' }
