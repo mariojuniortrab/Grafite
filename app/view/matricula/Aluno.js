@@ -8,10 +8,11 @@ Ext.define("Grafite.view.matricula.Aluno",{
     },
 
     requires: [
-        'Grafite.view.matricula.AlunoController'
+        'Grafite.view.matricula.AlunoController',
+        'Ext.layout.container.Card'
     ],
 
-    title: 'Employee Information',
+    title: 'Aluno',
     width: 600,
     bodyPadding: 10,
 
@@ -19,8 +20,10 @@ Ext.define("Grafite.view.matricula.Aluno",{
         anchor: '100%',
         labelWidth: 100
     },
+    layout:'card',
 
     items: [{
+        id:'card-0',
         xtype: 'fieldset',
         title: 'Básico',
         collapsible: false,
@@ -83,38 +86,10 @@ Ext.define("Grafite.view.matricula.Aluno",{
             }]
         }]
     },{
-        xtype: 'textfield',
-        name: 'email',
-        fieldLabel: 'Email Address',
-        vtype: 'email',
-        msgTarget: 'side',
-        allowBlank: false
-    }, {
-        xtype: 'fieldcontainer',
-        fieldLabel: 'Availability',
-        combineErrors: true,
-        msgTarget : 'side',
-        layout: 'hbox',
-        defaults: {
-            flex: 1,
-            hideLabel: true
-        },
-        items: [{
-            xtype: 'datefield',
-            name: 'startDate',
-            fieldLabel: 'Start',
-            margin: '0 5 0 0',
-            allowBlank: false
-        }, {
-            xtype     : 'datefield',
-            name      : 'endDate',
-            fieldLabel: 'End',
-            allowBlank: false
-        }]
-    }, {
+        id:'card-1',
         xtype: 'fieldset',
-        title: 'Details',
-        collapsible: true,
+        title: 'Coco',
+        collapsible: false,
         defaults: {
             labelWidth: 89,
             anchor: '100%',
@@ -125,86 +100,52 @@ Ext.define("Grafite.view.matricula.Aluno",{
         },
         items: [{
             xtype: 'fieldcontainer',
-            fieldLabel: 'Phone',
             combineErrors: true,
-            msgTarget: 'under',
+            msgTarget : 'side',
+            layout: 'hbox',
             defaults: {
-                hideLabel: true
-            },
-            items: [
-                {xtype: 'displayfield', value: '('},
-                {xtype: 'textfield',    fieldLabel: 'Phone 1', name: 'phone-1', width: 45, allowBlank: false},
-                {xtype: 'displayfield', value: ')'},
-                {xtype: 'textfield',    fieldLabel: 'Phone 2', name: 'phone-2', width: 45, allowBlank: false, margin: '0 5 0 0'},
-                {xtype: 'displayfield', value: '-'},
-                {xtype: 'textfield',    fieldLabel: 'Phone 3', name: 'phone-3', width: 60, allowBlank: false}
-            ]
-        }, {
-            xtype: 'fieldcontainer',
-            fieldLabel: 'Time worked',
-            combineErrors: false,
-            defaults: {
-                hideLabel: true
+                flex: 1,
+                labelWidth: 89,
+                anchor: '100%',
+                layout: {
+                    type: 'hbox'
+                }
             },
             items: [{
-               name : 'hours',
-               xtype: 'numberfield',
-               width: 95,
-               allowBlank: false
-           }, {
-               xtype: 'displayfield',
-               value: 'hours'
-           }, {
-               name : 'minutes',
-               xtype: 'numberfield',
-               width: 95,
-               allowBlank: false
-           }, {
-               xtype: 'displayfield',
-               value: 'mins'
-            }]
-        }, {
-            xtype : 'fieldcontainer',
-            combineErrors: true,
-            msgTarget: 'side',
-            fieldLabel: 'Full Name',
-            defaults: {
-                hideLabel: true
-            },
-            items: [{
+                name: 'nome',
+                xtype: 'textfield',
+                fieldLabel: 'Nome',
+                msgTarget: 'side',
+                allowBlank: false
+            },{
+                xtype: 'datefield',
+                name: 'nascimento',
+                fieldLabel: 'Dt. Nasc.',
+                margin: '0 0 0 10',
+                labelWidth: 70,
+                allowBlank: false
+            },{
                 //the width of this field in the HBox layout is set directly
                 //the other 2 items are given flex: 1, so will share the rest of the space
                 width: 75,
                 xtype: 'combo',
                 queryMode: 'local',
-                value: 'mrs',
+                value: 'sexo',
                 triggerAction: 'all',
                 forceSelection: true,
                 editable: false,
-                fieldLabel: 'Title',
-                name: 'title',
+                fieldLabel: 'Sexo',
+                name: 'sexo',
                 displayField: 'name',
                 valueField: 'value',
+                margin: '0 0 0 10',
                 store: {
                     fields: ['name', 'value'],
                     data: [
-                        {name : 'Mr',   value: 'mr'},
-                        {name : 'Mrs',  value: 'mrs'},
-                        {name : 'Miss', value: 'miss'}
+                        {name : 'Sim',   value: 'S'},
+                        {name : 'Não',  value: 'N'}
                     ]
                 }
-            }, {
-                xtype: 'textfield',
-                flex : 1,
-                name : 'firstName',
-                fieldLabel: 'First',
-                allowBlank: false
-            }, {
-                xtype: 'textfield',
-                flex : 1,
-                name : 'lastName',
-                fieldLabel: 'Last',
-                allowBlank: false
             }]
         }]
     }],
@@ -218,5 +159,15 @@ Ext.define("Grafite.view.matricula.Aluno",{
     }, {
         text   : 'Reset',
         handler: 'onResetClick'
+    },{
+        itemId: 'card-prev',
+        text: '&laquo; Previous',
+        handler: 'showPrevious',
+        disabled: true
+    },
+    {
+        itemId: 'card-next',
+        text: 'Next &raquo;',
+        handler: 'showNext'
     }]
 });

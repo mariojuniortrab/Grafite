@@ -40,5 +40,23 @@ Ext.define('Grafite.view.matricula.AlunoController', {
 
     onResetClick: function() {
         this.getView().reset();
+    },
+
+    showNext: function () {
+        this.doCardNavigation(1);
+    },
+
+    showPrevious: function (btn) {
+        this.doCardNavigation(-1);
+    },
+
+    doCardNavigation: function (incr) {
+        var view = this.getView();
+        var l = view.getLayout();
+        var i = l.activeItem.id.split('card-')[1];
+        var next = parseInt(i, 10) + incr;
+        l.setActiveItem(next);
+        view.down('#card-prev').setDisabled(next===0);
+        view.down('#card-next').setDisabled(next===1);
     }
 });

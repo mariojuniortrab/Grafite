@@ -12,6 +12,8 @@ Ext.define("Grafite.view.matricula.MatriculaJanela",{
 	
 	items : [{
         xtype: 'tabpanel',
+        tabPosition: 'left',
+        tabRotation: 0,
         items:[{
             xtype:'matricula-aluno'
         }]

@@ -26,9 +26,9 @@ extend: 'Ext.ux.desktop.Module',
     },
 
     createWindow : function(){
-        var desktop = this.app.getDesktop();
-        var win = desktop.getWindow(this.id);
-
+        var desktop = this.app.getDesktop(),
+        win = desktop.getWindow(this.id);
+        
         if(!win){
             win = desktop.createWindow(Ext.apply({
             	id: this.id,
@@ -43,6 +43,7 @@ extend: 'Ext.ux.desktop.Module',
     		},this.janela));
         }
         win.show();
+       
         return win;
     }
 });
